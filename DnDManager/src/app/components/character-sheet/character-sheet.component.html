@@ -1,10 +1,10 @@
 <div id="sheet_container">
   <app-cs-header></app-cs-header>
-  <app-cs-stats></app-cs-stats>
-  <app-cs-vitals></app-cs-vitals>
-  <app-cs-traits></app-cs-traits>
-  <app-cs-actions></app-cs-actions>
-  <app-cs-proficiencies></app-cs-proficiencies>
-  <app-cs-inventory></app-cs-inventory>
-  <app-cs-features></app-cs-features>
+
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Main"><app-cs-body></app-cs-body></mat-tab>
+    <mat-tab label="Spells"><app-spell-sheet></app-spell-sheet></mat-tab>
+    <mat-tab label="Inventory"><app-inventory></app-inventory></mat-tab>
+  </mat-tab-group>
+
 </div>
