@@ -1,0 +1,50 @@
+#sheet_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 50px;
+}
+
+app-cs-header {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+app-cs-stats {
+  grid-column: 1;
+  grid-row: 2/span 4;
+}
+
+app-cs-inventory {
+  grid-column: 1;
+  grid-row: 6/ span 2;
+}
+
+app-cs-vitals {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+app-cs-actions {
+  grid-column: 2;
+  grid-row: 3 / span 5;
+}
+
+app-cs-traits{
+  grid-column: 3;
+  grid-row:2/span 2;
+}
+
+app-cs-proficiencies {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+app-cs-features {
+  grid-column: 3;
+  grid-row: 5/span 3;
+}
+
+* {
+  border: black solid 1px;
+}
+
