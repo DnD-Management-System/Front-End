@@ -18,6 +18,9 @@ import { CsActionsComponent } from './components/character-sheet/cs-actions/cs-a
 import { CsProficienciesComponent } from './components/character-sheet/cs-proficiencies/cs-proficiencies.component';
 import { CsFeaturesComponent } from './components/character-sheet/cs-features/cs-features.component';
 import { CsInventoryComponent } from './components/character-sheet/cs-inventory/cs-inventory.component';
+import { PlayerTableComponent } from './components/dashboard/player-dashboard/player-table/player-table.component';
+import { GamesTableComponent } from './components/dashboard/dm-dashboard/games-table/games-table.component';
+import { GameManagementComponent } from './components/game-management/game-management.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { CsInventoryComponent } from './components/character-sheet/cs-inventory/
     CsActionsComponent,
     CsProficienciesComponent,
     CsFeaturesComponent,
-    CsInventoryComponent
+    CsInventoryComponent,
+    PlayerTableComponent,
+    GamesTableComponent,
+    GameManagementComponent
   ],
   imports: [
     BrowserModule,
