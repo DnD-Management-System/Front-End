@@ -21,6 +21,12 @@ import { CsInventoryComponent } from './components/character-sheet/cs-inventory/
 import { PlayerTableComponent } from './components/dashboard/player-dashboard/player-table/player-table.component';
 import { GamesTableComponent } from './components/dashboard/dm-dashboard/games-table/games-table.component';
 import { GameManagementComponent } from './components/game-management/game-management.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from "@angular/material/slider";
+import { CsDetailsComponent } from './components/character-sheet/cs-header/cs-details/cs-details.component';
+import { MatTabsModule } from "@angular/material/tabs";
+import { CsBodyComponent } from './components/character-sheet/cs-body/cs-body.component';
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -42,11 +48,17 @@ import { GameManagementComponent } from './components/game-management/game-manag
     CsInventoryComponent,
     PlayerTableComponent,
     GamesTableComponent,
-    GameManagementComponent
+    GameManagementComponent,
+    CsDetailsComponent,
+    CsBodyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatTabsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

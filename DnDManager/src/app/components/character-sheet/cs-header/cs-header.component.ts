@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CsHeaderComponent implements OnInit {
 
+  characterName:String = 'Placeholder Character';
+
   constructor() { }
 
   ngOnInit(): void {
