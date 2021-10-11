@@ -8,22 +8,22 @@
 <!--  </mat-card-content>-->
 <!--</mat-card>-->
 
-<mat-expansion-panel *ngIf="skills.length">
+<mat-expansion-panel *ngIf="skills.length" class="mat-elevation-z8">
   <mat-expansion-panel-header>
     <mat-panel-title><strong>{{ability | titlecase}}</strong></mat-panel-title>
-    <mat-panel-description>10</mat-panel-description>
-    <mat-panel-description>+0</mat-panel-description>
+    <mat-panel-description class="score">10</mat-panel-description>
+    <mat-panel-description class="modifier">+0</mat-panel-description>
   </mat-expansion-panel-header>
-  <mat-card *ngFor="let skill of skills">
+  <mat-card *ngFor="let skill of skills" class="mat-elevation-z6">
     <mat-card-title>{{skill | titlecase}} +0</mat-card-title>
     <mat-card-subtitle>10</mat-card-subtitle>
     <mat-card-content></mat-card-content>
   </mat-card>
 </mat-expansion-panel>
-<mat-expansion-panel *ngIf="skills.length === 0" hideToggle>
+<mat-expansion-panel *ngIf="skills.length === 0" hideToggle class="mat-elevation-z8">
   <mat-expansion-panel-header>
     <mat-panel-title><strong>{{ability | titlecase}}</strong></mat-panel-title>
-    <mat-panel-description>10</mat-panel-description>
-    <mat-panel-description>+0</mat-panel-description>
+    <mat-panel-description class="score">10</mat-panel-description>
+    <mat-panel-description class="modifier">+0</mat-panel-description>
   </mat-expansion-panel-header>
 </mat-expansion-panel>

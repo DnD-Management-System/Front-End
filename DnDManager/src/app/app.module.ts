@@ -30,6 +30,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { CsAbilityCardComponent } from './components/character-sheet/cs-body/cs-stats/cs-ability-card/cs-ability-card.component';
 import { MatCardModule } from "@angular/material/card";
 import { MatExpansionModule } from "@angular/material/expansion";
+import { MatTableModule } from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { MatExpansionModule } from "@angular/material/expansion";
     MatTabsModule,
     MatToolbarModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

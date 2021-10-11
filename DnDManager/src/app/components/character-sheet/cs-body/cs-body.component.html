@@ -1,9 +1,52 @@
 <div id = sheet_container>
-  <app-cs-stats></app-cs-stats>
-  <app-cs-vitals></app-cs-vitals>
-  <app-cs-traits></app-cs-traits>
-  <app-cs-actions></app-cs-actions>
-  <app-cs-proficiencies></app-cs-proficiencies>
-  <app-cs-inventory></app-cs-inventory>
-  <app-cs-features></app-cs-features>
+  <mat-card id="stats">
+    <mat-card-title>Abilities</mat-card-title>
+    <mat-card-content>
+      <app-cs-stats></app-cs-stats>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card id="vitals">
+    <mat-card-title>Vitals</mat-card-title>
+    <mat-card-content>
+      <app-cs-vitals></app-cs-vitals>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="traits">
+    <mat-card-title>Traits</mat-card-title>
+    <mat-card-content>
+      <app-cs-traits></app-cs-traits>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="actions">
+    <mat-card-title>Actions</mat-card-title>
+    <mat-card-content>
+      <app-cs-actions></app-cs-actions>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="proficiencies">
+    <mat-card-title>Proficiencies & Languages</mat-card-title>
+    <mat-card-content>
+      <app-cs-proficiencies></app-cs-proficiencies>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="inventory">
+    <mat-card-title>Equipment</mat-card-title>
+    <mat-card-content>
+      <app-cs-inventory></app-cs-inventory>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="features">
+    <mat-card-title>Features/Racial Traits</mat-card-title>
+    <mat-card-content>
+      <app-cs-features></app-cs-features>
+    </mat-card-content>
+  </mat-card>
+
 </div>

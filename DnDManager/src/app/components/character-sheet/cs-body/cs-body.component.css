@@ -4,42 +4,42 @@
   grid-auto-rows: auto;
 }
 
-app-cs-stats {
+#stats {
   grid-column: 1;
   grid-row: 1/span 4;
 }
 
-app-cs-inventory {
+#inventory {
   grid-column: 1;
   grid-row: 5/ span 2;
 }
 
-app-cs-vitals {
+#vitals {
   grid-column: 2;
   grid-row: 1;
 }
 
-app-cs-actions {
+#actions {
   grid-column: 2;
   grid-row: 2 / span 5;
 }
 
-app-cs-traits{
+#traits{
   grid-column: 3;
   grid-row:1/span 2;
 }
 
-app-cs-proficiencies {
+#proficiencies {
   grid-column: 3;
   grid-row: 3;
 }
 
-app-cs-features {
+#features {
   grid-column: 3;
   grid-row: 4/span 3;
 }
 
-* {
-  border: black solid 1px;
+mat-card {
+  margin: 5px;
 }
 

@@ -1,7 +1,2 @@
-<mat-card>
-  <mat-card-title>Abilities</mat-card-title>
-  <mat-card-content>
-    <cs-app-ability-card *ngFor="let ability of skillMap | keyvalue" [ability]="ability.key"
-                         [skills]="ability.value"></cs-app-ability-card>
-  </mat-card-content>
-</mat-card>
+<cs-app-ability-card *ngFor="let ability of skillMap | keyvalue" [ability]="ability.key"
+                       [skills]="ability.value"></cs-app-ability-card>
