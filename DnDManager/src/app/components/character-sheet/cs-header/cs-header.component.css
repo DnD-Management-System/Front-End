@@ -2,3 +2,7 @@ div {
   display: flex;
   justify-content: space-evenly;
 }
+
+app-cs-details{
+  align-self: flex-end;
+}

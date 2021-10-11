@@ -27,6 +27,9 @@ import { CsDetailsComponent } from './components/character-sheet/cs-header/cs-de
 import { MatTabsModule } from "@angular/material/tabs";
 import { CsBodyComponent } from './components/character-sheet/cs-body/cs-body.component';
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { CsAbilityCardComponent } from './components/character-sheet/cs-body/cs-stats/cs-ability-card/cs-ability-card.component';
+import { MatCardModule } from "@angular/material/card";
+import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -50,7 +53,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
     GamesTableComponent,
     GameManagementComponent,
     CsDetailsComponent,
-    CsBodyComponent
+    CsBodyComponent,
+    CsAbilityCardComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,9 @@ import { MatToolbarModule } from "@angular/material/toolbar";
     BrowserAnimationsModule,
     MatSliderModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
