@@ -1,13 +1,13 @@
-#sheet_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-}
+/*#sheet_container {*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(3, 1fr);*/
+/*  grid-auto-rows: auto;*/
+/*}*/
 
-app-cs-header {
-  grid-column: 1 / span 3;
-  grid-row: 1;
-}
+/*app-cs-header {*/
+/*  grid-column: 1 / span 3;*/
+/*  grid-row: 1;*/
+/*}*/
 
 /*app-cs-stats {*/
 /*  grid-column: 1;*/

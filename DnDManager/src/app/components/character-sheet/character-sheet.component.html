@@ -1,7 +1,9 @@
 <div id="sheet_container">
-  <app-cs-header></app-cs-header>
+  <mat-toolbar color="primary">
+      <app-cs-header></app-cs-header>
+  </mat-toolbar>
 
-  <mat-tab-group mat-align-tabs="start">
+  <mat-tab-group mat-align-tabs="center" color="accent">
     <mat-tab label="Main"><app-cs-body></app-cs-body></mat-tab>
     <mat-tab label="Spells"><app-spell-sheet></app-spell-sheet></mat-tab>
     <mat-tab label="Inventory"><app-inventory></app-inventory></mat-tab>

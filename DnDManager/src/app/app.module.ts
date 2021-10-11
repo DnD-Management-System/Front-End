@@ -26,6 +26,7 @@ import { MatSliderModule } from "@angular/material/slider";
 import { CsDetailsComponent } from './components/character-sheet/cs-header/cs-details/cs-details.component';
 import { MatTabsModule } from "@angular/material/tabs";
 import { CsBodyComponent } from './components/character-sheet/cs-body/cs-body.component';
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { CsBodyComponent } from './components/character-sheet/cs-body/cs-body.co
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatTabsModule
+    MatTabsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
