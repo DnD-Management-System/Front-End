@@ -6,12 +6,12 @@
 
 #stats {
   grid-column: 1;
-  grid-row: 1/span 4;
+  grid-row: 1/span 2;
 }
 
 #inventory {
   grid-column: 1;
-  grid-row: 5/ span 2;
+  grid-row: 3/ span 4;
 }
 
 #vitals {

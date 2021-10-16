@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Ability } from "../../../../../models/temp-models/player-subobjects/Ability";
+import { Skill } from "../../../../../models/temp-models/player-subobjects/Skill";
 
 @Component({
   selector: 'cs-app-ability-card',
@@ -8,10 +10,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CsAbilityCardComponent implements OnInit {
 
   @Input()
-  ability?:string;
+  ability!:Ability;
 
   @Input()
-  skills:string[] = [];
+  skills:Skill[] = [];
 
   constructor() { }
 

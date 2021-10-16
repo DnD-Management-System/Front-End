@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Traits } from "../../../../models/temp-models/player-subobjects/Traits";
 
 @Component({
   selector: 'app-cs-traits',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cs-traits.component.css']
 })
 export class CsTraitsComponent implements OnInit {
+
+  @Input()
+  traits!:Traits;
 
   constructor() { }
 

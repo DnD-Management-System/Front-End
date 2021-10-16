@@ -1,0 +1,14 @@
+<mat-expansion-panel *ngIf="spells.length" class="mat-elevation-z8">
+  <mat-expansion-panel-header>
+    <mat-panel-title *ngIf="level > 0">Level {{level}}</mat-panel-title>
+    <mat-panel-title *ngIf="level === 0">Cantrips</mat-panel-title>
+    <mat-panel-description>{{spells.length}}</mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-spell-level-content [spells]="spells"></app-spell-level-content>
+</mat-expansion-panel>
+<mat-expansion-panel *ngIf="spells.length === 0" hideToggle class="mat-elevation-z8">
+  <mat-expansion-panel-header>
+    <mat-panel-title *ngIf="level > 0">Level {{level}}</mat-panel-title>
+    <mat-panel-title *ngIf="level === 0">Cantrips</mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>

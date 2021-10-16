@@ -1,1 +1,1 @@
-<p>spell-sheet works!</p>
+<app-spell-level *ngFor="let level of spellMap | keyvalue"  [level]="level.key" [spells]="level.value"></app-spell-level>
