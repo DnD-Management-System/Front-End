@@ -31,7 +31,6 @@ div {
     text-align: center;
 }
 
-button {
-    margin-left: 2em;
-    margin-right: 2em;
+.headtext {
+    font-size: 20px;
 }

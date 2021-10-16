@@ -3,6 +3,7 @@
 <div>
       <p>
         <mat-form-field appearance="standard" method="GET" action="http://localhost:4200/UserController/checkLogin">
+          <p class="headtext">Login Here</p>
           <p class="logboxtext">Password:</p>
           <input matInput placeholder="Placeholder" required id="passwordinput">
           <p class="logboxtext">Username:</p>
@@ -10,7 +11,17 @@
           <input id="submitButton" type="submit" vale="Login" required/>
         </mat-form-field>
       </p>
+</div>
+<p class="headtext">Or</p>
+<div>
       <p>
-        <button method="POST" action="http://localhost:4200/UserController/index/createUser">Create New Account</button>
+        <mat-form-field appearance="standard" method="POST" action="http://localhost:4200/UserController/index/createUser">
+          <p class="headtext">Create New Account</p>
+          <p class="logboxtext">Password:</p>
+          <input matInput placeholder="Placeholder" required id="passwordinput">
+          <p class="logboxtext">Username:</p>
+          <input matInput placeholder="Placeholder" required id="usernameinput">
+          <input id="submitButton" type="submit" vale="Login" required/>
+        </mat-form-field>
       </p>
 </div>
