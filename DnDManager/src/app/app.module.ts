@@ -27,6 +27,30 @@ import { CsDetailsComponent } from './components/character-sheet/cs-header/cs-de
 import { MatTabsModule } from "@angular/material/tabs";
 import { CsBodyComponent } from './components/character-sheet/cs-body/cs-body.component';
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { CsAbilityCardComponent } from './components/character-sheet/cs-body/cs-stats/cs-ability-card/cs-ability-card.component';
+import { MatCardModule } from "@angular/material/card";
+import { MatExpansionModule } from "@angular/material/expansion";
+import { MatTableModule } from "@angular/material/table";
+import { SpellLevelComponent } from './components/spell-sheet/spell-level/spell-level.component';
+import { SpellCardComponent } from './components/spell-sheet/spell-level/spell-card/spell-card.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatSortModule } from "@angular/material/sort";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatButtonModule } from "@angular/material/button";
+import { SpellLevelContentComponent } from './components/spell-sheet/spell-level/spell-level-content/spell-level-content.component';
+import { MatGridListModule } from "@angular/material/grid-list";
+import { CsFeatureDetailsComponent } from './components/character-sheet/cs-body/cs-features/cs-feature-details/cs-feature-details.component';
+import { CsPersonalityComponent } from './components/character-sheet/cs-body/cs-traits/cs-personality/cs-personality.component';
+import { CsIdealsComponent } from './components/character-sheet/cs-body/cs-traits/cs-ideals/cs-ideals.component';
+import { CsBondsComponent } from './components/character-sheet/cs-body/cs-traits/cs-bonds/cs-bonds.component';
+import { CsFlawsComponent } from './components/character-sheet/cs-body/cs-traits/cs-flaws/cs-flaws.component';
+import { MatIconModule } from "@angular/material/icon";
+import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { MatDividerModule } from "@angular/material/divider";
+import { FormsModule } from "@angular/forms";
+import { MatCheckboxModule } from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [
@@ -50,7 +74,16 @@ import { MatToolbarModule } from "@angular/material/toolbar";
     GamesTableComponent,
     GameManagementComponent,
     CsDetailsComponent,
-    CsBodyComponent
+    CsBodyComponent,
+    CsAbilityCardComponent,
+    SpellLevelComponent,
+    SpellCardComponent,
+    SpellLevelContentComponent,
+    CsFeatureDetailsComponent,
+    CsPersonalityComponent,
+    CsIdealsComponent,
+    CsBondsComponent,
+    CsFlawsComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +91,22 @@ import { MatToolbarModule } from "@angular/material/toolbar";
     BrowserAnimationsModule,
     MatSliderModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

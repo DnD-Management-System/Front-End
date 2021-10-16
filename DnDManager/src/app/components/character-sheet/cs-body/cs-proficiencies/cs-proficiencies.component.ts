@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Proficiency } from "../../../../models/temp-models/player-subobjects/Proficiency";
+import { MatTableDataSource } from "@angular/material/table";
 
 @Component({
   selector: 'app-cs-proficiencies',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CsProficienciesComponent implements OnInit {
 
+  @Input()
+  proficiencies:Proficiency[] = [];
+
+  displayedColumns: string[] = ['name'];
+  dataSource = new MatTableDataSource<Proficiency>();
+
   constructor() { }
 
   ngOnInit(): void {
+    this.dataSource.data = this.proficiencies;
   }
 
 }

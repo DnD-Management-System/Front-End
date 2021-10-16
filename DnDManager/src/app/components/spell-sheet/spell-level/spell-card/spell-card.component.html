@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>{{spell.name}}</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-card class="mat-elevation-z8">
+    <mat-card-content>
+      <p>Level: {{spell.level}}</p>
+      <p>Casting time: {{spell.castingTime}}</p>
+      <p>Range: {{spell.range}}</p>
+      <p>Components: {{spell.components}}</p>
+      <p>Duration: {{spell.duration}}</p>
+      <p>School: {{spell.school}}</p>
+      <p>Save: {{spell.save}}</p>
+      <p>Damage: {{spell.damage}}</p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="mat-elevation-z8">
+    <mat-card-content>
+      <p>{{spell.description}}</p>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

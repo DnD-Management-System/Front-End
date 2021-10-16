@@ -1,1 +1,2 @@
-<p>cs-stats works!</p>
+<cs-app-ability-card *ngFor="let ability of skillMap | keyvalue" [ability]="ability.key"
+                       [skills]="ability.value"></cs-app-ability-card>

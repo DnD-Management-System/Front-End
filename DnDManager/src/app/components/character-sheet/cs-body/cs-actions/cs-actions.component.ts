@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MatTableDataSource } from "@angular/material/table";
+import { Action } from "../../../../models/temp-models/player-subobjects/Action";
 
 @Component({
   selector: 'app-cs-actions',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CsActionsComponent implements OnInit {
 
+  @Input()
+  actions:Action[] = [];
+
+  dataSource = new MatTableDataSource<Action>();
+
+
   constructor() { }
 
   ngOnInit(): void {
+    this.dataSource.data = this.actions;
   }
+
+
+  columnsToDisplay = ['name', 'bonus', 'damage', 'type'];
 
 }

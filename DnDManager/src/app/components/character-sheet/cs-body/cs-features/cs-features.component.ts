@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CsFeatureDetailsComponent } from "./cs-feature-details/cs-feature-details.component";
+import { MatDialog } from "@angular/material/dialog";
+import { MatTableDataSource } from "@angular/material/table";
+import { Feature } from "../../../../models/temp-models/player-subobjects/Feature";
 
 @Component({
   selector: 'app-cs-features',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CsFeaturesComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  features:Feature[] = [];
+
+  displayedColumns: string[] = ['name'];
+  dataSource = new MatTableDataSource<Feature>();
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.dataSource.data = this.features;
+  }
+
+  openDialog(pickedFeature: Feature) {
+    this.dialog.open(CsFeatureDetailsComponent, {
+      data: {
+        name: pickedFeature.name,
+        description: pickedFeature.description
+      }
+    })
   }
 
 }
