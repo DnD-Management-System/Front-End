@@ -18,10 +18,15 @@
         <mat-form-field appearance="standard" method="POST" action="http://localhost:4200/UserController/index/createUser">
           <p class="headtext">Create New Account</p>
           <p class="logboxtext">Password:</p>
-          <input matInput placeholder="Placeholder" required id="passwordinput">
+          <input matInput placeholder="Placeholder" required id="passwordinput2">
           <p class="logboxtext">Username:</p>
-          <input matInput placeholder="Placeholder" required id="usernameinput">
-          <input id="submitButton" type="submit" vale="Login" required/>
+          <input matInput placeholder="Placeholder" required id="usernameinput2">
+          <p class="logboxtext">Account Type:</p>
+          <select matNativeControl required>
+            <option value="player">Player</option>
+            <option value="DM">Dungeon Master</option>
+          </select>
+          <input id="submitButton2" type="submit" vale="Login" required/>
         </mat-form-field>
       </p>
 </div>

@@ -28,6 +28,7 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { CsBodyComponent } from './components/character-sheet/cs-body/cs-body.component';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSliderModule,
     MatTabsModule,
     MatToolbarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
