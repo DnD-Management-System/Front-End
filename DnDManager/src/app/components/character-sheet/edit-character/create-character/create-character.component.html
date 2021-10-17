@@ -1,4 +1,4 @@
-<mat-stepper [linear]="false" #stepper>
+<mat-stepper [linear]="true" #stepper>
 
   <mat-step [stepControl]="basicInfo">
     <form [formGroup]="basicInfo">
@@ -8,7 +8,7 @@
         <input matInput placeholder="Name" formControlName="characterName" required>
       </mat-form-field>
       <mat-form-field appearance="fill">
-        <mat-label>Player Name</mat-label>
+        <mat-label>Character Name</mat-label>
         <input matInput placeholder="Name" formControlName="playerName" required>
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -315,7 +315,7 @@
       <table mat-table [dataSource]="proficiencyDataSource">
         <ng-container matColumnDef="value">
           <th mat-header-cell *matHeaderCellDef>Proficiencies</th>
-          <td mat-cell *matCellDef="let element">{{element.value}}</td>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="traitColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: traitColumns;"></tr>
@@ -331,6 +331,10 @@
         </mat-grid-tile>
       </mat-grid-list>
     </form>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
   </mat-step>
   <mat-step [stepControl]="featuresGroup">
     <form [formGroup]="featuresGroup">

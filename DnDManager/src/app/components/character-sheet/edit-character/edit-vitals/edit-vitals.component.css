@@ -1,0 +1,36 @@
+
+#basicInfo {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+}
+
+#class {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+#level {
+  grid-column: 3 / span 2;
+  grid-row: 1;
+}
+
+#player_name {
+  grid-column: 5 / span 2;
+  grid-row: 1;
+}
+
+#race {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+}
+
+#alignment {
+  grid-column: 4 / span 3;
+  grid-row: 2;
+}
+
+div {
+  border: black 1px solid;
+}

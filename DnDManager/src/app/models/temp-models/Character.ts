@@ -9,7 +9,7 @@ import { Traits } from "./player-subobjects/Traits";
 import { Item } from "./Item";
 import { Proficiency } from "./player-subobjects/Proficiency";
 
-export class Player {
+export class Character {
     constructor(public _name:string, public _vitals:Vitals,
               public _actions:Action[], public _features:Feature[],
               public _moneyPouch:Money[], public _abilities:Ability[],

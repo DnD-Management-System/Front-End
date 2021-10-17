@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Player } from "../../../models/temp-models/Player";
-import { EditCharacterComponent } from "../edit-character/edit-character.component";
+import { Character } from "../../../models/temp-models/Character";
 import { MatDialog } from "@angular/material/dialog";
+import { Vitals } from "../../../models/temp-models/player-subobjects/Vitals";
+import { Money } from "../../../models/temp-models/player-subobjects/Money";
 
 @Component({
   selector: 'app-cs-body',
@@ -11,19 +12,19 @@ import { MatDialog } from "@angular/material/dialog";
 export class CsBodyComponent implements OnInit {
 
   @Input()
-  player!:Player;
+  player!:Character;
 
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  editCharacter() {
-    this.dialog.open(EditCharacterComponent, {
-      data: {
-        player: this.player
-      }
-    })
+  updateVitals(newVitals: Vitals) {
+    this.player.vitals = newVitals;
+  }
+
+  updateMoney(newMoney: Money[]) {
+    this.player.moneyPouch = newMoney;
   }
 
 }

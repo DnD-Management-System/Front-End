@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from "../../models/temp-models/Player";
+import { Character } from "../../models/temp-models/Character";
 import { Router } from "@angular/router";
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from "@angular/router";
 })
 export class CharacterSheetComponent implements OnInit {
 
-  player!:Player;
+  player!:Character;
 
   constructor(private router: Router) {
     let temp:any = this.router.getCurrentNavigation();

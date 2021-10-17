@@ -55,6 +55,12 @@ import { EditCharacterComponent } from './components/character-sheet/edit-charac
 import { CreateCharacterComponent } from './components/character-sheet/edit-character/create-character/create-character.component';
 import { ModifyCharacterComponent } from './components/character-sheet/edit-character/modify-character/modify-character.component';
 import { MatStepperModule } from "@angular/material/stepper";
+import { EditVitalsComponent } from './components/character-sheet/edit-character/edit-vitals/edit-vitals.component';
+import { EditAbilitiesComponent } from './components/character-sheet/edit-character/edit-abilities/edit-abilities.component';
+import { EditMoneyComponent } from './components/character-sheet/edit-character/edit-money/edit-money.component';
+import { EditActionsComponent } from './components/character-sheet/edit-character/edit-actions/edit-actions.component';
+import { EditProficienciesComponent } from './components/character-sheet/edit-character/edit-proficiencies/edit-proficiencies.component';
+import { EditFeaturesComponent } from './components/character-sheet/edit-character/edit-features/edit-features.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +96,13 @@ import { MatStepperModule } from "@angular/material/stepper";
     CsFlawsComponent,
     EditCharacterComponent,
     CreateCharacterComponent,
-    ModifyCharacterComponent
+    ModifyCharacterComponent,
+    EditVitalsComponent,
+    EditAbilitiesComponent,
+    EditMoneyComponent,
+    EditActionsComponent,
+    EditProficienciesComponent,
+    EditFeaturesComponent
   ],
   imports: [
     BrowserModule,

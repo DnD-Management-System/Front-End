@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from "../../../models/temp-models/Player";
+import { Character } from "../../../models/temp-models/Character";
 import { MatTableDataSource } from "@angular/material/table";
 import { Router } from "@angular/router";
 import { MOCKPLAYERS } from "../../../models/temp-models/mock-players";
@@ -13,9 +13,9 @@ import { EditCharacterComponent } from "../../character-sheet/edit-character/edi
 })
 export class PlayerDashboardComponent implements OnInit {
 
-  players:Player[] = []
+  players:Character[] = []
   displayedColumns: string[] = ['name', 'campaign'];
-  dataSource = new MatTableDataSource<Player>();
+  dataSource = new MatTableDataSource<Character>();
 
   constructor(private router:Router, public dialog: MatDialog) { }
 
@@ -24,7 +24,7 @@ export class PlayerDashboardComponent implements OnInit {
     this.dataSource.data = this.players;
   }
 
-  tableClick(row:Player) {
+  tableClick(row:Character) {
     this.router.navigate(['character'], {state: {player : row}});
   }
 

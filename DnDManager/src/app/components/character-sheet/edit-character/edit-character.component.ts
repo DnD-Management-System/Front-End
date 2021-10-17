@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { Player } from "../../../models/temp-models/Player";
+import { Character } from "../../../models/temp-models/Character";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 @Component({
@@ -9,7 +9,7 @@ import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 })
 export class EditCharacterComponent implements OnInit {
 
-  player!:Player;
+  player!:Character;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     if(data) {

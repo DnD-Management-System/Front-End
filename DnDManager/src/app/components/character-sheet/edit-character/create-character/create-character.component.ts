@@ -12,8 +12,9 @@ import { Flaw } from "../../../../models/temp-models/player-subobjects/trait-sub
 import { Traits } from "../../../../models/temp-models/player-subobjects/Traits";
 import { Proficiency } from "../../../../models/temp-models/player-subobjects/Proficiency";
 import { Feature } from "../../../../models/temp-models/player-subobjects/Feature";
-import { Player } from "../../../../models/temp-models/Player";
+import { Character } from "../../../../models/temp-models/Character";
 import { MOCKPLAYERS } from "../../../../models/temp-models/mock-players";
+import { Money } from "../../../../models/temp-models/player-subobjects/Money";
 
 @Component({
   selector: 'app-create-character',
@@ -139,8 +140,8 @@ export class CreateCharacterComponent implements OnInit {
 
   createCharacter() {
 
-    MOCKPLAYERS.push(new Player(this.basicInfo.get('characterName')?.value, this.createVitals(), this.actions, this.features,
-      [], this.createAbilities(), this.createSkills(), this.createTraits(), [], [], this.proficiencies, 'Campaign'));
+    MOCKPLAYERS.push(new Character(this.basicInfo.get('characterName')?.value, this.createVitals(), this.actions, this.features,
+      this.createMoney(), this.createAbilities(), this.createSkills(), this.createTraits(), [], [], this.proficiencies, 'Campaign'));
 
     console.log(this.createVitals());
     console.log(this.createAbilities());
@@ -194,6 +195,16 @@ export class CreateCharacterComponent implements OnInit {
 
   createTraits() : Traits {
     return new Traits(this.personalityTraits, this.bonds, this.ideals, this.flaws);
+  }
+
+  createMoney() : Money[] {
+    return [
+      new Money('cp', 0),
+      new Money('sp', 0),
+      new Money('ep', 0),
+      new Money('gp', 0),
+      new Money('pp', 0)
+    ]
   }
 
   addAction() {

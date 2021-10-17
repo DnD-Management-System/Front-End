@@ -1,6 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatCheckboxChange } from "@angular/material/checkbox";
 import { Vitals } from "../../../../models/temp-models/player-subobjects/Vitals";
+import { MatDialog } from "@angular/material/dialog";
+import { EditVitalsComponent } from "../../edit-character/edit-vitals/edit-vitals.component";
 
 @Component({
   selector: 'app-cs-vitals',
@@ -12,7 +14,10 @@ export class CsVitalsComponent implements OnInit {
   @Input()
   vitals!:Vitals;
 
-  constructor() { }
+  @Output()
+  updatedVitalsEvent = new EventEmitter<Vitals>();
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.calcHeath();
@@ -36,5 +41,19 @@ export class CsVitalsComponent implements OnInit {
     } else {
       this.vitals.deathSaveFailure--;
     }
+  }
+
+  openEditDialog() {
+    const dialogRef = this.dialog.open(EditVitalsComponent, {
+      data: {
+        vitals: this.vitals
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result.event == 'update') {
+       this.updatedVitalsEvent.emit(result.data);
+      }
+    });
   }
 }

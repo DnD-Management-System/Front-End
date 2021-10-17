@@ -1,4 +1,4 @@
-import { Player } from "./Player";
+import { Character } from "./Character";
 import { Vitals } from "./player-subobjects/Vitals";
 import { Action } from "./player-subobjects/Action";
 import { Feature } from "./player-subobjects/Feature";
@@ -111,10 +111,10 @@ import { Flaw } from "./player-subobjects/trait-subobjects/Flaw";
     new Item("Bedroll", "1 gp", "7 lb", "A padded mat for sleeping. It's not comfortable, but you don't have a lot of options outside of towns.")
   ];
 
-  let player:Player = new Player("Test Player", vitals, actions, features, money, abilities, skills, traits, spells, inventory, proficiencies, 'The Curse of Strahd');
+  let player:Character = new Character("Test Character", vitals, actions, features, money, abilities, skills, traits, spells, inventory, proficiencies, 'The Curse of Strahd');
   //**************************END OF PLAYER DUMMY DATA****************************************************
 
-export const MOCKPLAYERS: Player[] = [
+export const MOCKPLAYERS: Character[] = [
   player
 ]
 

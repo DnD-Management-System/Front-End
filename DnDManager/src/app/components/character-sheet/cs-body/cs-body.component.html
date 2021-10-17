@@ -10,7 +10,7 @@
   <mat-card id="vitals">
     <mat-card-title>Vitals</mat-card-title>
     <mat-card-content>
-      <app-cs-vitals [vitals]="player.vitals"></app-cs-vitals>
+      <app-cs-vitals [vitals]="player.vitals" (updatedVitalsEvent)="updateVitals($event)"></app-cs-vitals>
     </mat-card-content>
   </mat-card>
 
@@ -38,7 +38,7 @@
   <mat-card id="inventory">
     <mat-card-title>Money</mat-card-title>
     <mat-card-content>
-      <app-cs-inventory [moneyPouch]="player.moneyPouch"></app-cs-inventory>
+      <app-cs-inventory [moneyPouch]="player.moneyPouch" (updatedMoneyEvent)="updateMoney($event)"></app-cs-inventory>
     </mat-card-content>
   </mat-card>
 
@@ -48,9 +48,5 @@
       <app-cs-features [features]="player.features"></app-cs-features>
     </mat-card-content>
   </mat-card>
-
-  <button mat-fab color="primary" class="mat-elevation-z24" (click)="editCharacter()">
-    <mat-icon>edit</mat-icon>
-  </button>
 
 </div>
