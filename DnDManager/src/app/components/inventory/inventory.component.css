@@ -6,3 +6,9 @@ table {
   font-size: 14px;
   width: 100%;
 }
+
+.mat-fab {
+  position: fixed !important;
+  right:20px;
+  bottom: 20px;
+}

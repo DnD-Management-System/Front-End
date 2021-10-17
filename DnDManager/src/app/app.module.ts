@@ -49,8 +49,12 @@ import { CsFlawsComponent } from './components/character-sheet/cs-body/cs-traits
 import { MatIconModule } from "@angular/material/icon";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatDividerModule } from "@angular/material/divider";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { EditCharacterComponent } from './components/character-sheet/edit-character/edit-character.component';
+import { CreateCharacterComponent } from './components/character-sheet/edit-character/create-character/create-character.component';
+import { ModifyCharacterComponent } from './components/character-sheet/edit-character/modify-character/modify-character.component';
+import { MatStepperModule } from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
@@ -83,7 +87,10 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     CsPersonalityComponent,
     CsIdealsComponent,
     CsBondsComponent,
-    CsFlawsComponent
+    CsFlawsComponent,
+    EditCharacterComponent,
+    CreateCharacterComponent,
+    ModifyCharacterComponent
   ],
   imports: [
     BrowserModule,
@@ -106,7 +113,9 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     MatProgressBarModule,
     MatDividerModule,
     FormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

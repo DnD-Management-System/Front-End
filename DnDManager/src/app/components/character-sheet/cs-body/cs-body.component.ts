@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Player } from "../../../models/temp-models/Player";
+import { EditCharacterComponent } from "../edit-character/edit-character.component";
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-cs-body',
@@ -11,9 +13,17 @@ export class CsBodyComponent implements OnInit {
   @Input()
   player!:Player;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  editCharacter() {
+    this.dialog.open(EditCharacterComponent, {
+      data: {
+        player: this.player
+      }
+    })
   }
 
 }

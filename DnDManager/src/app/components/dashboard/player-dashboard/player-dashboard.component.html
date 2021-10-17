@@ -14,3 +14,7 @@
       (click)="tableClick(row)"
       *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<button mat-fab color="primary" class="mat-elevation-z24" (click)="createCharacter()">
+  <mat-icon>add</mat-icon>
+</button>

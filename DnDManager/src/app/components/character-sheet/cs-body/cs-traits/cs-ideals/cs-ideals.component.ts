@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
+import { Ideal } from "../../../../../models/temp-models/player-subobjects/trait-subobjects/Ideal";
 
 @Component({
   selector: 'app-cs-ideals',
@@ -9,10 +10,10 @@ import { MatTableDataSource } from "@angular/material/table";
 export class CsIdealsComponent implements OnInit {
 
   @Input()
-  ideals: string[] = [];
+  ideals: Ideal[] = [];
 
   displayedColumns: string[] = ['name'];
-  dataSource = new MatTableDataSource<string>();
+  dataSource = new MatTableDataSource<Ideal>();
 
   constructor() { }
 
