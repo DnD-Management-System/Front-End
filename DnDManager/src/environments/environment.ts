@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  getAllCharacters: 'http://localhost:8000/character/getAllByUser',
+  selectCampaign: 'http://localhost:8000/campaign/selectCampaign',
+  createCharacter: 'http://localhost:8000/charactrer/createCharacter',
+  selectCharacter: 'http://localhost:8000/character/selectCharacter',
+  characterSheet: 'http://localhost:8000/character/sheet/',
+  createItem: 'http://localhost:8000/item/create'
 };
 
 /*

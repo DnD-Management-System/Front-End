@@ -61,6 +61,9 @@ import { EditMoneyComponent } from './components/character-sheet/edit-character/
 import { EditActionsComponent } from './components/character-sheet/edit-character/edit-actions/edit-actions.component';
 import { EditProficienciesComponent } from './components/character-sheet/edit-character/edit-proficiencies/edit-proficiencies.component';
 import { EditFeaturesComponent } from './components/character-sheet/edit-character/edit-features/edit-features.component';
+import { HttpClientModule } from "@angular/common/http";
+import { AddSpellComponent } from './components/spell-sheet/add-spell/add-spell.component';
+import { AddItemComponent } from './components/inventory/add-item/add-item.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +105,9 @@ import { EditFeaturesComponent } from './components/character-sheet/edit-charact
     EditMoneyComponent,
     EditActionsComponent,
     EditProficienciesComponent,
-    EditFeaturesComponent
+    EditFeaturesComponent,
+    AddSpellComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
@@ -127,7 +132,8 @@ import { EditFeaturesComponent } from './components/character-sheet/edit-charact
     FormsModule,
     MatCheckboxModule,
     MatStepperModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>Name</th>
-    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+    <td mat-cell *matCellDef="let element">{{element.character}}</td>
   </ng-container>
 
   <ng-container matColumnDef="campaign">
@@ -11,7 +11,7 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr id="campaignButton" mat-row
-      (click)="tableClick(row)"
+      (click)="tableClick(row.character)"
       *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 

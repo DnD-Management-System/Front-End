@@ -3,6 +3,8 @@ import { MatTableDataSource } from "@angular/material/table";
 import { MatSort } from "@angular/material/sort";
 import { MatPaginator } from "@angular/material/paginator";
 import { Item } from "../../models/temp-models/Item";
+import { AddItemComponent } from "./add-item/add-item.component";
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-inventory',
@@ -21,7 +23,7 @@ export class InventoryComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -40,6 +42,16 @@ export class InventoryComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  openNewItemDialog() {
+    let dialogRef = this.dialog.open(AddItemComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result.event == 'update') {
+        this.inventory.push(result.data);
+      }
+    });
   }
 
 }

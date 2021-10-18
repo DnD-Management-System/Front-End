@@ -39,7 +39,7 @@ export class EditVitalsComponent implements OnInit {
   }
 
   submitChanges() {
-    let outputVitals: Vitals = new Vitals(this.basicInfo.get('class')?.value, this.basicInfo.get('level')?.value,
+    let outputVitals: Vitals = new Vitals(this.inputVitals.vitalsId, this.basicInfo.get('class')?.value, this.basicInfo.get('level')?.value,
       this.basicInfo.get('player')?.value, this.basicInfo.get('race')?.value,
       this.basicInfo.get('alignment')?.value, this.gameplayVitals.get('ac')?.value,
       this.gameplayVitals.get('initiative')?.value, this.inputVitals.currentHitDice,

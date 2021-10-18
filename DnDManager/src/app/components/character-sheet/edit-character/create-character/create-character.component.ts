@@ -151,7 +151,7 @@ export class CreateCharacterComponent implements OnInit {
   }
 
   createVitals(): Vitals {
-    return new Vitals(this.basicInfo.get('class')?.value, this.basicInfo.get('level')?.value,
+    return new Vitals(0, this.basicInfo.get('class')?.value, this.basicInfo.get('level')?.value,
       this.basicInfo.get('playerName')?.value, this.basicInfo.get('race')?.value,
       this.basicInfo.get('alignment')?.value, this.gameplayVitals.get('ac')?.value, String((this.abilities.get('dexterity')?.value - 10) / 2),
       this.gameplayVitals.get('hitDice')?.value, this.gameplayVitals.get('hitDice')?.value, this.gameplayVitals.get('hp')?.value,

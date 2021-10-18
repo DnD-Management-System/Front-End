@@ -16,6 +16,7 @@ import { Flaw } from "./player-subobjects/trait-subobjects/Flaw";
   //************** START OF DUMMY PLAYER DATA *************************
 
   let vitals:Vitals = new Vitals(
+    0,
     "Fighter",
     1,
     "Charlotte",
@@ -107,8 +108,8 @@ import { Flaw } from "./player-subobjects/trait-subobjects/Flaw";
   ];
 
   let inventory:Item[] = [
-    new Item("Longsword", "15 gp", "3 lb", "A long one-handed sword, popular among adventurers across the multiverse."),
-    new Item("Bedroll", "1 gp", "7 lb", "A padded mat for sleeping. It's not comfortable, but you don't have a lot of options outside of towns.")
+    new Item(0, "Longsword", "15 gp", "3 lb", "A long one-handed sword, popular among adventurers across the multiverse.", 0),
+    new Item(0, "Bedroll", "1 gp", "7 lb", "A padded mat for sleeping. It's not comfortable, but you don't have a lot of options outside of towns.", 0)
   ];
 
   let player:Character = new Character("Test Character", vitals, actions, features, money, abilities, skills, traits, spells, inventory, proficiencies, 'The Curse of Strahd');
