@@ -10,7 +10,11 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row
+  <tr id="campaignButton" mat-row
       (click)="tableClick(row)"
       *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<button mat-fab id="createButton" color="primary" class="mat-elevation-z24" (click)="createCharacter()">
+  <mat-icon>add</mat-icon>
+</button>

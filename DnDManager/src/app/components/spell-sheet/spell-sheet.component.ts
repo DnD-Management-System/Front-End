@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Spell } from "../../models/temp-models/Spell";
+import { MatDialog } from "@angular/material/dialog";
+import { AddSpellComponent } from "./add-spell/add-spell.component";
 
 @Component({
   selector: 'app-spell-sheet',
@@ -13,7 +15,7 @@ export class SpellSheetComponent implements OnInit {
 
   spellMap: Map<number, Spell[]> = new Map<number, Spell[]>();
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
 
   }
 
@@ -29,6 +31,16 @@ export class SpellSheetComponent implements OnInit {
       }
       this.spellMap.set(i, levelSpells);
     }
+  }
+
+  openNewSpellDialog() {
+    let dialogRef = this.dialog.open(AddSpellComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result.event == 'update') {
+        this.spells.push(result.data);
+      }
+    });
   }
 
 }

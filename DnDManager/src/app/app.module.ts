@@ -49,8 +49,22 @@ import { CsFlawsComponent } from './components/character-sheet/cs-body/cs-traits
 import { MatIconModule } from "@angular/material/icon";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatDividerModule } from "@angular/material/divider";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { EditCharacterComponent } from './components/character-sheet/edit-character/edit-character.component';
+import { CreateCharacterComponent } from './components/character-sheet/edit-character/create-character/create-character.component';
+import { ModifyCharacterComponent } from './components/character-sheet/edit-character/modify-character/modify-character.component';
+import { MatStepperModule } from "@angular/material/stepper";
+import { EditVitalsComponent } from './components/character-sheet/edit-character/edit-vitals/edit-vitals.component';
+import { EditAbilitiesComponent } from './components/character-sheet/edit-character/edit-abilities/edit-abilities.component';
+import { EditMoneyComponent } from './components/character-sheet/edit-character/edit-money/edit-money.component';
+import { EditActionsComponent } from './components/character-sheet/edit-character/edit-actions/edit-actions.component';
+import { EditProficienciesComponent } from './components/character-sheet/edit-character/edit-proficiencies/edit-proficiencies.component';
+import { EditFeaturesComponent } from './components/character-sheet/edit-character/edit-features/edit-features.component';
+import { HttpClientModule } from "@angular/common/http";
+import { AddSpellComponent } from './components/spell-sheet/add-spell/add-spell.component';
+import { AddItemComponent } from './components/inventory/add-item/add-item.component';
+import { EditTraitsComponent } from './components/character-sheet/edit-character/edit-traits/edit-traits.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +97,19 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     CsPersonalityComponent,
     CsIdealsComponent,
     CsBondsComponent,
-    CsFlawsComponent
+    CsFlawsComponent,
+    EditCharacterComponent,
+    CreateCharacterComponent,
+    ModifyCharacterComponent,
+    EditVitalsComponent,
+    EditAbilitiesComponent,
+    EditMoneyComponent,
+    EditActionsComponent,
+    EditProficienciesComponent,
+    EditFeaturesComponent,
+    AddSpellComponent,
+    AddItemComponent,
+    EditTraitsComponent
   ],
   imports: [
     BrowserModule,
@@ -106,7 +132,10 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     MatProgressBarModule,
     MatDividerModule,
     FormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

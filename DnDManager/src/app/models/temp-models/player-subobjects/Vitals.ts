@@ -1,8 +1,16 @@
 export class Vitals {
-  constructor(public _clazz:string, public _level:number, public _player:string, public _race:string, public _alignment:string,
+  constructor(public _vitalsId:number, public _clazz:string, public _level:number, public _player:string, public _race:string, public _alignment:string,
               public _armorClass:number, public _initiative:string, public _currentHitDice:number, public _hitDice:number,
               public _currentHp:number, public _totalHp:number, public _healthPercent:number, public _speed:string,
               public _deathSaveSuccess:number, public _deathSaveFailure:number) { }
+
+  get vitalsId(): number {
+    return this._vitalsId;
+  }
+
+  set vitalsId(value: number) {
+    this._vitalsId = value;
+  }
 
   get clazz(): string {
     return this._clazz;

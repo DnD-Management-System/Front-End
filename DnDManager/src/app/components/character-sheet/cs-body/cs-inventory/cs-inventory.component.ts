@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
 import { Money } from "../../../../models/temp-models/player-subobjects/Money";
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-cs-inventory',
@@ -12,10 +13,13 @@ export class CsInventoryComponent implements OnInit {
   @Input()
   moneyPouch:Money[] = [];
 
+  @Output()
+  updatedMoneyEvent = new EventEmitter<Money[]>();
+
   displayedColumns:string[] = ['name', 'value'];
   dataSource = new MatTableDataSource<Money>();
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getTotal();
@@ -23,6 +27,9 @@ export class CsInventoryComponent implements OnInit {
   }
 
   getTotal() {
+    while(this.moneyPouch.length > 5) {
+      this.moneyPouch.pop();
+    }
     let total:number = 0;
     for(let money of this.moneyPouch) {
       switch (money.name.toLowerCase()) {

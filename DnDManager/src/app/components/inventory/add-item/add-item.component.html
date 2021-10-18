@@ -1,0 +1,22 @@
+<form [formGroup]="itemGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Value</mat-label>
+    <input matInput formControlName="value">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Weight</mat-label>
+    <input matInput formControlName="weight">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+  <div>
+    <button mat-raised-button (click)="submitItem()">Submit</button>
+    <button mat-raised-button (click)="close()">Close</button>
+  </div>
+</form>

@@ -1,0 +1,375 @@
+<mat-stepper [linear]="true" #stepper>
+
+  <mat-step [stepControl]="basicInfo" id="step1">
+    <form [formGroup]="basicInfo">
+      <ng-template matStepLabel>Basic Info</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Character Name</mat-label>
+        <input id="charName" matInput placeholder="Name" formControlName="characterName" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Player Name</mat-label>
+        <input id="playName" matInput placeholder="Name" formControlName="playerName" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Character Race</mat-label>
+        <input id="charRace" matInput placeholder="Human" formControlName="race" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Class</mat-label>
+        <input id="className" matInput placeholder="Class Name" formControlName="class" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Level</mat-label>
+        <input id="charLevel" matInput type="number" formControlName="level" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Alignment</mat-label>
+        <input id="charAlign" matInput placeholder="LG" formControlName="alignment" required>
+      </mat-form-field>
+      <div>
+        <button id="nextBut" mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="gameplayVitals" id="step2">
+    <form [formGroup]="gameplayVitals">
+      <ng-template matStepLabel>Gameplay Vitals</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>HP</mat-label>
+        <input id="hp" matInput type="number" formControlName="hp" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>AC</mat-label>
+        <input id="ac" matInput type="number" formControlName="ac" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Speed</mat-label>
+        <input id="speed" matInput placeholder="xx ft" formControlName="speed" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Hit Dice</mat-label>
+        <input id="hitdice" matInput type="number" formControlName="hitDice" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Proficiency Bonus</mat-label>
+        <input id="prof" matInput type="number" formControlName="proficiencyBonus" required>
+      </mat-form-field>
+      <div>
+        <button id="prevBut" mat-button matStepperPrevious>Back</button>
+        <button id="nextBut2" mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="abilities" id="step3">
+    <form [formGroup]="abilities">
+      <ng-template matStepLabel>Abilities Scores and Skills</ng-template>
+      <mat-accordion>
+        <mat-expansion-panel id="exp1">
+          <mat-expansion-panel-header>
+            <mat-panel-title><strong>Strength*</strong></mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field appearance="fill">
+            <mat-label>Strength Score:</mat-label>
+            <input id="str" matInput type="number" formControlName="strength" required>
+          </mat-form-field>
+          <h4>Proficiencies</h4>
+          <p><mat-checkbox id="ath" formControlName="athletics">Athletics</mat-checkbox></p>
+        </mat-expansion-panel>
+        <mat-expansion-panel id="exp2">
+          <mat-expansion-panel-header>
+            <mat-panel-title><strong>Dexterity*</strong></mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field appearance="fill">
+            <mat-label>Dexterity Score:</mat-label>
+            <input id="dex" matInput type="number" formControlName="dexterity" required>
+          </mat-form-field>
+          <h4>Proficiencies</h4>
+          <p><mat-checkbox id="acro" formControlName="acrobatics">Acrobatics</mat-checkbox></p>
+          <p><mat-checkbox id="sleight" formControlName="sleight">Sleight of Hand</mat-checkbox></p>
+          <p><mat-checkbox id="stealth" formControlName="stealth">Stealth</mat-checkbox></p>
+        </mat-expansion-panel>
+        <mat-expansion-panel id="exp3">
+          <mat-expansion-panel-header>
+            <mat-panel-title><strong>Constitution*</strong></mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field appearance="fill">
+            <mat-label>Constitution Score:</mat-label>
+            <input id="con" matInput type="number" formControlName="constitution" required>
+          </mat-form-field>
+        </mat-expansion-panel>
+        <mat-expansion-panel id="exp4">
+          <mat-expansion-panel-header>
+            <mat-panel-title><strong>Intelligence*</strong></mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field appearance="fill">
+            <mat-label>Intelligence Score:</mat-label>
+            <input id="int" matInput type="number" formControlName="intelligence" required>
+          </mat-form-field>
+          <h4>Proficiencies</h4>
+          <p><mat-checkbox id="arcana" formControlName="arcana">Arcana</mat-checkbox></p>
+          <p><mat-checkbox id="history" formControlName="history">History</mat-checkbox></p>
+          <p><mat-checkbox id="invest" formControlName="investigation">Investigation</mat-checkbox></p>
+          <p><mat-checkbox id="nat" formControlName="nature">Nature</mat-checkbox></p>
+          <p><mat-checkbox id="rel" formControlName="religion">Religion</mat-checkbox></p>
+        </mat-expansion-panel>
+        <mat-expansion-panel id="exp5">
+          <mat-expansion-panel-header>
+            <mat-panel-title><strong>Wisdom*</strong></mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field appearance="fill">
+            <mat-label>Wisdom Score:</mat-label>
+            <input id="wis" matInput type="number" formControlName="wisdom" required>
+          </mat-form-field>
+          <h4>Proficiencies</h4>
+          <p><mat-checkbox id="anim" formControlName="animal">Animal Handling</mat-checkbox></p>
+          <p><mat-checkbox id="insight" formControlName="insight">Insight</mat-checkbox></p>
+          <p><mat-checkbox id="med" formControlName="medicine">Medicine</mat-checkbox></p>
+          <p><mat-checkbox id="perc" formControlName="perception">Perception</mat-checkbox></p>
+          <p><mat-checkbox id="surv" formControlName="survival">Survival</mat-checkbox></p>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel id="exp6">
+          <mat-expansion-panel-header>
+            <mat-panel-title><strong>Charisma*</strong></mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field appearance="fill">
+            <mat-label>Charisma Score</mat-label>
+            <input id="charisma" matInput type="number" formControlName="charisma" required>
+          </mat-form-field>
+          <h4>Proficiencies</h4>
+          <p><mat-checkbox id="dec" formControlName="deception">Deception</mat-checkbox></p>
+          <p><mat-checkbox id="intim" formControlName="intimidation">Intimidation</mat-checkbox></p>
+          <p><mat-checkbox id="perf" formControlName="performance">Performance</mat-checkbox></p>
+          <p><mat-checkbox id="pers" formControlName="persuasion">Persuasion</mat-checkbox></p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </form>
+    <div>
+      <button id="prevBut2" mat-button matStepperPrevious>Back</button>
+      <button id="nextBut3" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step [stepControl]="actionsGroup" id="step4">
+    <form [formGroup]="actionsGroup">
+      <ng-template matStepLabel>Actions</ng-template>
+      <table mat-table [dataSource]="actionDataSource">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Action Name</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="bonus">
+          <th mat-header-cell *matHeaderCellDef>Attack Bonus</th>
+          <td mat-cell *matCellDef="let element">{{element.attackBonus}}</td>
+        </ng-container>
+        <ng-container matColumnDef="damage">
+          <th mat-header-cell *matHeaderCellDef>Damage</th>
+          <td mat-cell *matCellDef="let element">{{element.damage}}</td>
+        </ng-container>
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef>Damage Type</th>
+          <td mat-cell *matCellDef="let element">{{element.type}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="actionColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: actionColumns;"></tr>
+      </table>
+      <mat-grid-list cols="5" gutterSize="20px">
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <input id="actName" matInput placeholder="Name" formControlName="actionName" [(ngModel)]="actionName">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <input id="actAtt" matInput placeholder="Attack Bonus" formControlName="actionBonus" [(ngModel)]="actionBonus">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <input id="actDam" matInput placeholder="Damage" formControlName="actionDamage" [(ngModel)]="actionDamage">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <input id="actDamType" matInput placeholder="Damage Type" formControlName="actionType" [(ngModel)]="actionType">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button id="actAddBut" mat-raised-button (click)="addAction()">Add</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+    <div>
+      <button id="prevBut3" mat-button matStepperPrevious>Back</button>
+      <button id="nextBut4" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step [stepControl]="traits" id="step5">
+    <div class="traits_container">
+      <form [formGroup]="traits">
+        <ng-template matStepLabel>Traits (1 of 2)</ng-template>
+        <table mat-table [dataSource]="personalityDataSource">
+          <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef>Personality Traits</th>
+            <td mat-cell *matCellDef="let element">{{element.value}}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="traitColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: traitColumns;"></tr>
+        </table>
+        <mat-grid-list cols="2">
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <input id="personality" matInput placeholder="Value" formControlName="personality" [(ngModel)]="personality">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button id="persAdd" mat-raised-button (click)="addPersonality()">Add</button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </form>
+      <form [formGroup]="traits">
+        <table mat-table [dataSource]="bondDataSource">
+          <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef>Bonds</th>
+            <td mat-cell *matCellDef="let element">{{element.value}}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="traitColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: traitColumns;"></tr>
+        </table>
+        <mat-grid-list cols="2">
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <input id="bond" matInput placeholder="Value" formControlName="bond" [(ngModel)]="bond">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button id="bondAdd" mat-raised-button (click)="addBond()">Add</button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </form>
+    </div>
+    <div>
+      <button id="prevBut4" mat-button matStepperPrevious>Back</button>
+      <button id="nextBut5" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="traits" id="step6">
+    <div class="traits_container">
+      <form [formGroup]="traits">
+        <ng-template matStepLabel>Traits (2 of 2)</ng-template>
+
+        <table mat-table [dataSource]="idealDataSource">
+          <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef>Ideals</th>
+            <td mat-cell *matCellDef="let element">{{element.value}}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="traitColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: traitColumns;"></tr>
+        </table>
+        <mat-grid-list cols="2">
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <input id="ideal" matInput placeholder="Value" formControlName="ideal" [(ngModel)]="ideal">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button id="idealAdd" mat-raised-button (click)="addIdeal()">Add</button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </form>
+      <form [formGroup]="traits">
+        <table mat-table [dataSource]="flawDataSource">
+          <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef>Flaws</th>
+            <td mat-cell *matCellDef="let element">{{element.value}}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="traitColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: traitColumns;"></tr>
+        </table>
+        <mat-grid-list cols="2">
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <input id="flaw" matInput placeholder="Value" formControlName="flaw" [(ngModel)]="flaw">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button id="flawAdd" mat-raised-button (click)="addFlaw()">Add</button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </form>
+    </div>
+
+    <div>
+      <button id="prevBut5" mat-button matStepperPrevious>Back</button>
+      <button id="nextBut6" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="proficienciesGroup" id="step7">
+    <form [formGroup]="proficienciesGroup">
+      <ng-template matStepLabel>Proficiencies</ng-template>
+      <table mat-table [dataSource]="proficiencyDataSource">
+        <ng-container matColumnDef="value">
+          <th mat-header-cell *matHeaderCellDef>Proficiencies</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="traitColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: traitColumns;"></tr>
+      </table>
+      <mat-grid-list cols="2">
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <input id="proficiency" matInput placeholder="Value" formControlName="proficiency" [(ngModel)]="proficiency">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button id="proficiencyAdd" mat-raised-button (click)="addProficiency()">Add</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+    <div>
+      <button id="prevBut6" mat-button matStepperPrevious>Back</button>
+      <button id="nextBut7" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="featuresGroup" id="step8">
+    <form [formGroup]="featuresGroup">
+      <ng-template matStepLabel>Features</ng-template>
+      <table mat-table [dataSource]="featureDataSource">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Description</th>
+          <td mat-cell *matCellDef="let element">{{element.description}}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="featureColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: featureColumns;"></tr>
+      </table>
+      <mat-grid-list cols="3">
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <input id="featName" matInput placeholder="Name" formControlName="featureName" [(ngModel)]="featureName">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <textarea matInput placeholder="Description" formControlName="featureDescription" [(ngModel)]="featureDescription"></textarea>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button id="featAdd" mat-raised-button (click)="addFeature()">Add</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+    <div>
+      <button id="prevBut7" mat-button matStepperPrevious>Back</button>
+      <button id="submitButton" mat-button mat-dialog-close (click)="createCharacter()">Submit</button>
+    </div>
+  </mat-step>
+</mat-stepper>

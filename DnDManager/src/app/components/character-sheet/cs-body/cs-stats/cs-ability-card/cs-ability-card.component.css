@@ -6,11 +6,6 @@ mat-expansion-panel {
   margin-top: 5px;
 }
 
-/*.score {*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*}*/
-
 .score {
   flex: 0 0 50%;
 }

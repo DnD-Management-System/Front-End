@@ -6,7 +6,7 @@ export class Skill{
   set ability(value: string) {
     this._ability = value;
   }
-  constructor(public _name:string, public _value:number, public _modifier:string, public _proficiency:boolean, public _ability:string) {}
+  constructor(public _name:string,public _modifier:string, public _proficiency:boolean, public _ability:string) {}
 
   get proficiency(): boolean {
     return this._proficiency;
@@ -22,14 +22,6 @@ export class Skill{
 
   set name(value: string) {
     this._name = value;
-  }
-
-  get value(): number {
-    return this._value;
-  }
-
-  set value(value: number) {
-    this._value = value;
   }
 
   get modifier(): string {

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
+import { Flaw } from "../../../../../models/temp-models/player-subobjects/trait-subobjects/Flaw";
 
 @Component({
   selector: 'app-cs-flaws',
@@ -9,10 +10,10 @@ import { MatTableDataSource } from "@angular/material/table";
 export class CsFlawsComponent implements OnInit {
 
   @Input()
-  flaws: string[] = [];
+  flaws: Flaw[] = [];
 
   displayedColumns: string[] = ['name'];
-  dataSource = new MatTableDataSource<string>();
+  dataSource = new MatTableDataSource<Flaw>();
 
   constructor() { }
 

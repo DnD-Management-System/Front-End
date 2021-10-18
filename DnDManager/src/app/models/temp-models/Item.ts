@@ -1,5 +1,21 @@
 export class Item{
-  constructor(public _name:string, public _weight:string, public _value:string, public _description:string) {}
+  constructor(public _itemId:number, public _name:string, public _weight:string, public _value:string, public _description:string, public _inventorySheet:number) {}
+
+  get itemId(): number {
+    return this._itemId;
+  }
+
+  set itemId(value: number) {
+    this._itemId = value;
+  }
+
+  get inventorySheet(): number {
+    return this._inventorySheet;
+  }
+
+  set inventorySheet(value: number) {
+    this._inventorySheet = value;
+  }
 
   get name(): string {
     return this._name;

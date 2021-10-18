@@ -9,22 +9,8 @@ import { Traits } from "./player-subobjects/Traits";
 import { Item } from "./Item";
 import { Proficiency } from "./player-subobjects/Proficiency";
 
-export class Player {
-  get campaign(): string {
-    return this._campaign;
-  }
-
-  set campaign(value: string) {
-    this._campaign = value;
-  }
-  get proficiencies(): Proficiency[] {
-    return this._proficiencies;
-  }
-
-  set proficiencies(value: Proficiency[]) {
-    this._proficiencies = value;
-  }
-  constructor(public _name:string, public _vitals:Vitals,
+export class Character {
+    constructor(public _name:string, public _vitals:Vitals,
               public _actions:Action[], public _features:Feature[],
               public _moneyPouch:Money[], public _abilities:Ability[],
               public _skills:Skill[], public _traits:Traits,
@@ -109,5 +95,20 @@ export class Player {
 
   set inventory(value: Item[]) {
     this._inventory = value;
+  }
+
+  get campaign(): string {
+    return this._campaign;
+  }
+
+  set campaign(value: string) {
+    this._campaign = value;
+  }
+  get proficiencies(): Proficiency[] {
+    return this._proficiencies;
+  }
+
+  set proficiencies(value: Proficiency[]) {
+    this._proficiencies = value;
   }
 }

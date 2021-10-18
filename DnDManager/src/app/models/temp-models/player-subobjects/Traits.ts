@@ -1,35 +1,40 @@
-export class Traits{
-  constructor(public _personalityTraits:string[], public _bonds:string[], public _ideals:string[], public _flaws:string[]) {}
+import { PersonalityTrait } from "./trait-subobjects/PersonalityTrait";
+import { Bond } from "./trait-subobjects/Bond";
+import { Ideal } from "./trait-subobjects/Ideal";
+import { Flaw } from "./trait-subobjects/Flaw";
 
-  get personalityTraits(): string[] {
+export class Traits{
+  constructor(public _personalityTraits:PersonalityTrait[], public _bonds:Bond[], public _ideals:Ideal[], public _flaws:Flaw[]) {}
+
+  get personalityTraits(): PersonalityTrait[] {
     return this._personalityTraits;
   }
 
-  set personalityTraits(value: string[]) {
+  set personalityTraits(value: PersonalityTrait[]) {
     this._personalityTraits = value;
   }
 
-  get bonds(): string[] {
+  get bonds(): Bond[] {
     return this._bonds;
   }
 
-  set bonds(value: string[]) {
+  set bonds(value: Bond[]) {
     this._bonds = value;
   }
 
-  get ideals(): string[] {
+  get ideals(): Ideal[] {
     return this._ideals;
   }
 
-  set ideals(value: string[]) {
+  set ideals(value: Ideal[]) {
     this._ideals = value;
   }
 
-  get flaws(): string[] {
+  get flaws(): Flaw[] {
     return this._flaws;
   }
 
-  set flaws(value: string[]) {
+  set flaws(value: Flaw[]) {
     this._flaws = value;
   }
 }

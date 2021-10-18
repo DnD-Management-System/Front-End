@@ -28,14 +28,16 @@
     </mat-form-field>/{{vitals.hitDice}}
   </form>
   <mat-label>Death Saves</mat-label>
-  <p>
-    <mat-checkbox color="primary" (change)="deathSuccess($event)"> </mat-checkbox>
-    <mat-checkbox color="primary" (change)="deathSuccess($event)"></mat-checkbox>
-    <mat-checkbox color="primary" (change)="deathSuccess($event)">Success</mat-checkbox>
-  </p>
-  <p>
-    <mat-checkbox color="warn" (change)="deathFailure($event)"></mat-checkbox>
-    <mat-checkbox color="warn" (change)="deathFailure($event)"></mat-checkbox>
-    <mat-checkbox color="warn" (change)="deathFailure($event)">Failure</mat-checkbox>
-  </p>
+  <form [formGroup]="hitDiceBoxes">
+    <p>
+      <mat-checkbox color="primary" (change)="deathSuccess($event)" formControlName="success1"></mat-checkbox>
+      <mat-checkbox color="primary" (change)="deathSuccess($event)" formControlName="success2"></mat-checkbox>
+      <mat-checkbox color="primary" (change)="deathSuccess($event)" formControlName="success3">Success</mat-checkbox>
+    </p>
+    <p>
+      <mat-checkbox color="warn" (change)="deathFailure($event)" formControlName="fail1"></mat-checkbox>
+      <mat-checkbox color="warn" (change)="deathFailure($event)" formControlName="fail2"></mat-checkbox>
+      <mat-checkbox color="warn" (change)="deathFailure($event)" formControlName="fail3">Failure</mat-checkbox>
+    </p>
+  </form>
 </mat-card>

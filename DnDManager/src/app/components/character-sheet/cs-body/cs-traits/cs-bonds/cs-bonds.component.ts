@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
+import { Bond } from "../../../../../models/temp-models/player-subobjects/trait-subobjects/Bond";
 
 @Component({
   selector: 'app-cs-bonds',
@@ -9,10 +10,10 @@ import { MatTableDataSource } from "@angular/material/table";
 export class CsBondsComponent implements OnInit {
 
   @Input()
-  bonds: string[] = [];
+  bonds: Bond[] = [];
 
   displayedColumns: string[] = ['name'];
-  dataSource = new MatTableDataSource<string>();
+  dataSource = new MatTableDataSource<Bond>();
 
   constructor() { }
 

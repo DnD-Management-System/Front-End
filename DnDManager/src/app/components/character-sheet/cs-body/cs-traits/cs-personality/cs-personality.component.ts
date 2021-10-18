@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
+import { PersonalityTrait } from "../../../../../models/temp-models/player-subobjects/trait-subobjects/PersonalityTrait";
 
 @Component({
   selector: 'app-cs-personality',
@@ -9,10 +10,10 @@ import { MatTableDataSource } from "@angular/material/table";
 export class CsPersonalityComponent implements OnInit {
 
   @Input()
-  personality_traits: string[] = [];
+  personality_traits: PersonalityTrait[] = [];
 
   displayedColumns: string[] = ['name'];
-  dataSource = new MatTableDataSource<string>();
+  dataSource = new MatTableDataSource<PersonalityTrait>();
 
   constructor() { }
 

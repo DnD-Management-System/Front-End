@@ -24,7 +24,7 @@ export class CsStatsComponent implements OnInit {
       let abilitySkills:Skill[] = [];
       let skillIndex:number = 0;
       for(let skill of this.skills) {
-        if(skill.ability === ability.name) {
+        if(skill.ability.toLowerCase() === ability.name.toLowerCase()) {
           abilitySkills[skillIndex] = skill;
           skillIndex++;
         }
