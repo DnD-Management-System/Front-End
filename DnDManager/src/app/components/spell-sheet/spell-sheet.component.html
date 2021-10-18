@@ -1,0 +1,4 @@
+<app-spell-level *ngFor="let level of spellMap | keyvalue"  [level]="level.key" [spells]="level.value"></app-spell-level>
+<button mat-fab color="primary" class="mat-elevation-z24" (click)="openNewSpellDialog()">
+  <mat-icon>add</mat-icon>
+</button>

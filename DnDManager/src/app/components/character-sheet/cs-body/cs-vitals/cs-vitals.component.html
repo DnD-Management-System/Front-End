@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-grid-list cols="10" rowHeight="2:1">
+    <mat-grid-tile [colspan]="5" [rowspan]="1">{{vitals.clazz}} {{vitals.level}}</mat-grid-tile>
+    <mat-grid-tile [colspan]="5" [rowspan]="1">{{vitals.player}}</mat-grid-tile>
+    <mat-grid-tile [colspan]="5" [rowspan]="1">{{vitals.race}}</mat-grid-tile>
+    <mat-grid-tile [colspan]="5" [rowspan]="1">{{vitals.alignment}}</mat-grid-tile>
+  </mat-grid-list>
+
+<mat-divider></mat-divider>
+  <br />
+  <p>AC: {{vitals.armorClass}}
+  <p>Initiative Modifier: {{vitals.initiative}}</p>
+  <p>Speed: {{vitals.speed}}</p>
+  <form>
+    <mat-form-field>
+      <mat-label>Current HP</mat-label>
+      <input name="currentHp" matInput type="number" [(ngModel)]="vitals.currentHp" value={{vitals.currentHp}} (change)="calcHeath()"/>
+    </mat-form-field>/{{vitals.totalHp}}
+  </form>
+  <mat-progress-bar *ngIf="vitals.healthPercent > 75" mode="determinate" [value]="vitals.healthPercent" color="primary"></mat-progress-bar>
+  <mat-progress-bar *ngIf="vitals.healthPercent > 25 && vitals.healthPercent < 75" mode="determinate" [value]="vitals.healthPercent" color="accent"></mat-progress-bar>
+  <mat-progress-bar *ngIf="vitals.healthPercent < 25 " mode="determinate" [value]="vitals.healthPercent" color="warn"></mat-progress-bar>
+
+  <form>
+    <mat-form-field>
+      <mat-label>Current Hit Dice</mat-label>
+      <input name="currentHitDice" matInput type="number" [(ngModel)]="vitals.currentHitDice" value={{vitals.currentHitDice}}/>
+    </mat-form-field>/{{vitals.hitDice}}
+  </form>
+  <mat-label>Death Saves</mat-label>
+  <form [formGroup]="hitDiceBoxes">
+    <p>
+      <mat-checkbox color="primary" (change)="deathSuccess($event)" formControlName="success1"></mat-checkbox>
+      <mat-checkbox color="primary" (change)="deathSuccess($event)" formControlName="success2"></mat-checkbox>
+      <mat-checkbox color="primary" (change)="deathSuccess($event)" formControlName="success3">Success</mat-checkbox>
+    </p>
+    <p>
+      <mat-checkbox color="warn" (change)="deathFailure($event)" formControlName="fail1"></mat-checkbox>
+      <mat-checkbox color="warn" (change)="deathFailure($event)" formControlName="fail2"></mat-checkbox>
+      <mat-checkbox color="warn" (change)="deathFailure($event)" formControlName="fail3">Failure</mat-checkbox>
+    </p>
+  </form>
+</mat-card>

@@ -1,0 +1,58 @@
+#sheet_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+}
+
+#stats {
+  grid-column: 1;
+  grid-row: 1/span 2;
+}
+
+#inventory {
+  grid-column: 1;
+  grid-row: 3/ span 4;
+}
+
+#vitals {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#actions {
+  grid-column: 2;
+  grid-row: 2 / span 5;
+}
+
+#traits{
+  grid-column: 3;
+  grid-row:1/span 2;
+}
+
+#proficiencies {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#features {
+  grid-column: 3;
+  grid-row: 4/span 3;
+}
+
+mat-card {
+  margin: 5px;
+}
+
+.mat-fab {
+  position: fixed !important;
+  right:20px;
+  bottom: 20px;
+}
+
+mat-card-title {
+  padding: 10px;
+}
+
+button {
+  float: right;
+}

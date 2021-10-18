@@ -1,0 +1,32 @@
+<mat-card *ngIf="traits.personalityTraits.length" class="mat-elevation-z8">
+  <mat-card-title>
+    Personality Traits
+  </mat-card-title>
+  <mat-card-content>
+    <app-cs-personality [personality_traits]="traits.personalityTraits"></app-cs-personality>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="traits.ideals.length" class="mat-elevation-z8">
+  <mat-card-title>
+    Ideals
+  </mat-card-title>
+  <mat-card-content>
+    <app-cs-ideals [ideals]="traits.ideals"></app-cs-ideals>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="traits.bonds.length" class="mat-elevation-z8">
+  <mat-card-title>
+    Bonds
+  </mat-card-title>
+  <mat-card-content>
+    <app-cs-bonds [bonds]="traits.bonds"></app-cs-bonds>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="traits.flaws.length" class="mat-elevation-z8">
+  <mat-card-title>
+    Flaws
+  </mat-card-title>
+  <mat-card-content>
+    <app-cs-flaws [flaws]="traits.flaws"></app-cs-flaws>
+  </mat-card-content>
+</mat-card>

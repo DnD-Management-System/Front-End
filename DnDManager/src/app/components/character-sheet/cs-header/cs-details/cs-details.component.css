@@ -1,0 +1,8 @@
+div {
+  display: flex;
+  align-items: stretch;
+}
+
+p {
+  padding-left: 5px;
+}

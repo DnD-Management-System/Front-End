@@ -1,0 +1,15 @@
+mat-card {
+  margin-top:10px;
+}
+
+mat-expansion-panel {
+  margin-top: 5px;
+}
+
+.score {
+  flex: 0 0 50%;
+}
+
+.modifier {
+  flex: 0 0 auto;
+}

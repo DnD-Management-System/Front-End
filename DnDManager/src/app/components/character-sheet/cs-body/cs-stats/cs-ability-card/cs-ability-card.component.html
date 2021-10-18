@@ -1,0 +1,19 @@
+<mat-expansion-panel *ngIf="skills.length" class="mat-elevation-z8">
+  <mat-expansion-panel-header>
+    <mat-panel-title><strong>{{ability.name | titlecase}}</strong></mat-panel-title>
+    <mat-panel-description class="score">{{ability.score}}</mat-panel-description>
+    <mat-panel-description class="modifier">{{ability.modifier}}</mat-panel-description>
+  </mat-expansion-panel-header>
+  <mat-card *ngFor="let skill of skills" class="mat-elevation-z6">
+    <mat-card-title>{{skill.name | titlecase}} {{skill.modifier}}</mat-card-title>
+    <mat-card-subtitle>Proficient? <mat-checkbox [checked]="skill.proficiency" disabled="true"></mat-checkbox> </mat-card-subtitle>
+    <mat-card-content></mat-card-content>
+  </mat-card>
+</mat-expansion-panel>
+<mat-expansion-panel *ngIf="skills.length === 0" hideToggle class="mat-elevation-z8">
+  <mat-expansion-panel-header>
+    <mat-panel-title><strong>{{ability.name | titlecase}}</strong></mat-panel-title>
+    <mat-panel-description class="score">{{ability.score}}</mat-panel-description>
+    <mat-panel-description class="modifier">{{ability.modifier}}</mat-panel-description>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>

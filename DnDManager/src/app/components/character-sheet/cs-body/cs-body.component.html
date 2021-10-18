@@ -1,0 +1,66 @@
+<div id = sheet_container>
+  <mat-card id="stats">
+    <mat-card-title>Abilities
+      <button mat-button (click)="openAbilitiesEditDialog()"><mat-icon>edit</mat-icon></button>
+    </mat-card-title>
+    <mat-card-content>
+      <app-cs-stats [skills]="character.skills" [abilities]="character.abilities"></app-cs-stats>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card id="vitals">
+    <mat-card-title>Vitals
+      <button mat-button (click)="openVitalsEditDialog()"><mat-icon>edit</mat-icon></button>
+    </mat-card-title>
+    <mat-card-content>
+      <app-cs-vitals [vitals]="character.vitals" (updatedVitalsEvent)="updateVitals($event)"></app-cs-vitals>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="traits">
+    <mat-card-title>Traits
+      <button mat-button (click)="openTraitsEditDialog()"><mat-icon>edit</mat-icon></button>
+    </mat-card-title>
+    <mat-card-content>
+      <app-cs-traits [traits]="character.traits"></app-cs-traits>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="actions">
+    <mat-card-title>Actions
+      <button mat-button (click)="openActionsEditDialog()"><mat-icon>edit</mat-icon></button>
+    </mat-card-title>
+    <mat-card-content>
+      <app-cs-actions [actions]="character.actions"></app-cs-actions>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="proficiencies">
+    <mat-card-title>Proficiency & Languages
+      <button mat-button (click)="openProficienciesEditDialog()"><mat-icon>edit</mat-icon></button>
+    </mat-card-title>
+    <mat-card-content>
+      <app-cs-proficiencies [proficiencies]="character.proficiencies"></app-cs-proficiencies>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="inventory">
+    <mat-card-title>Money
+      <button mat-button (click)="openMoneyEditDialog()"><mat-icon>edit</mat-icon></button>
+    </mat-card-title>
+    <mat-card-content>
+      <app-cs-inventory [moneyPouch]="character.moneyPouch" (updatedMoneyEvent)="updateMoney($event)"></app-cs-inventory>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="features">
+    <mat-card-title>Features/Racial Traits
+    <button mat-button (click)="openFeaturesEditDialog()"><mat-icon>edit</mat-icon></button>
+    </mat-card-title>
+    <mat-card-content>
+      <app-cs-features [features]="character.features"></app-cs-features>
+    </mat-card-content>
+  </mat-card>
+
+</div>

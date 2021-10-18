@@ -1,0 +1,16 @@
+<div id="sheet_container">
+  <mat-toolbar color="primary">
+      <app-cs-header [characterName]="player.name"></app-cs-header>
+  </mat-toolbar>
+
+
+
+  <mat-tab-group mat-align-tabs="center" color="accent">
+    <mat-tab label="Main"><app-cs-body [character]="player"></app-cs-body></mat-tab>
+    <mat-tab label="Spells"><app-spell-sheet [spells]="player.spells"></app-spell-sheet></mat-tab>
+    <mat-tab label="Inventory"><app-inventory [inventory]="player.inventory"></app-inventory></mat-tab>
+  </mat-tab-group>
+
+
+
+</div>
