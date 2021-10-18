@@ -9,7 +9,8 @@ export const environment = {
   createCharacter: 'http://localhost:8000/charactrer/createCharacter',
   selectCharacter: 'http://localhost:8000/character/selectCharacter',
   characterSheet: 'http://localhost:8000/character/sheet/',
-  createItem: 'http://localhost:8000/item/create'
+  createItem: 'http://localhost:8000/item/create',
+  login: 'http://localhost:8000/index/signIn'
 };
 
 /*

@@ -64,6 +64,7 @@ import { EditFeaturesComponent } from './components/character-sheet/edit-charact
 import { HttpClientModule } from "@angular/common/http";
 import { AddSpellComponent } from './components/spell-sheet/add-spell/add-spell.component';
 import { AddItemComponent } from './components/inventory/add-item/add-item.component';
+import { EditTraitsComponent } from './components/character-sheet/edit-character/edit-traits/edit-traits.component';
 
 @NgModule({
   declarations: [
@@ -107,7 +108,8 @@ import { AddItemComponent } from './components/inventory/add-item/add-item.compo
     EditProficienciesComponent,
     EditFeaturesComponent,
     AddSpellComponent,
-    AddItemComponent
+    AddItemComponent,
+    EditTraitsComponent
   ],
   imports: [
     BrowserModule,

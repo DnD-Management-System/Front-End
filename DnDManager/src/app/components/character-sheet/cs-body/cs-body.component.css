@@ -48,3 +48,11 @@ mat-card {
   right:20px;
   bottom: 20px;
 }
+
+mat-card-title {
+  padding: 10px;
+}
+
+button {
+  float: right;
+}

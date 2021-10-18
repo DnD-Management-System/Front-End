@@ -5,5 +5,6 @@ export const environment = {
   createCharacter: 'http://54.146.173.34:8000/charactrer/createCharacter',
   selectCharacter: 'http://54.146.173.34:8000/character/selectCharacter',
   characterSheet: 'http://54.146.173.34:8000/character/sheet/',
-  createItem: 'http://54.146.173.34:8000/item/create'
+  createItem: 'http://54.146.173.34:8000/item/create',
+  login: 'http://54.146.173.34:8000/index/signIn'
 };

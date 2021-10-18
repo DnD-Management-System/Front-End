@@ -39,4 +39,8 @@ export class CharacterService {
   createItem(item:Item) {
     return this.httpClient.post(environment.createItem, JSON.stringify(item));
   }
+
+  login(username:string, password:string) {
+    return this.httpClient.post(environment.login, {username: username, password:password});
+  }
 }

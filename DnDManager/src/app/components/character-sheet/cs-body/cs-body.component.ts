@@ -3,6 +3,8 @@ import { Character } from "../../../models/temp-models/Character";
 import { MatDialog } from "@angular/material/dialog";
 import { Vitals } from "../../../models/temp-models/player-subobjects/Vitals";
 import { Money } from "../../../models/temp-models/player-subobjects/Money";
+import { EditVitalsComponent } from "../edit-character/edit-vitals/edit-vitals.component";
+import { EditMoneyComponent } from "../edit-character/edit-money/edit-money.component";
 
 @Component({
   selector: 'app-cs-body',
@@ -12,7 +14,7 @@ import { Money } from "../../../models/temp-models/player-subobjects/Money";
 export class CsBodyComponent implements OnInit {
 
   @Input()
-  player!:Character;
+  character!:Character;
 
   constructor(public dialog: MatDialog) { }
 
@@ -20,11 +22,59 @@ export class CsBodyComponent implements OnInit {
   }
 
   updateVitals(newVitals: Vitals) {
-    this.player.vitals = newVitals;
+    this.character.vitals = newVitals;
   }
 
   updateMoney(newMoney: Money[]) {
-    this.player.moneyPouch = newMoney;
+    this.character.moneyPouch = newMoney;
+  }
+
+  openVitalsEditDialog() {
+    const dialogRef = this.dialog.open(EditVitalsComponent, {
+      data: {
+        vitals: this.character.vitals
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result.event == 'update') {
+        this.character.vitals = result.data;
+      }
+    });
+  }
+
+  openMoneyEditDialog() {
+    const dialogRef = this.dialog.open(EditMoneyComponent, {
+      data: {
+        money: this.character.moneyPouch
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result.event == 'update') {
+        this.character.moneyPouch = result.data;
+      }
+    });
+  }
+
+  openAbilitiesEditDialog() {
+
+  }
+
+  openActionsEditDialog() {
+
+  }
+
+  openTraitsEditDialog() {
+
+  }
+
+  openProficienciesEditDialog() {
+
+  }
+
+  openFeaturesEditDialog() {
+
   }
 
 }

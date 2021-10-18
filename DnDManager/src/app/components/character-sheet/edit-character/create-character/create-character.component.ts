@@ -65,29 +65,29 @@ export class CreateCharacterComponent implements OnInit {
     });
     this.abilities = this._formBuilder.group({
       strength: ['', Validators.required],
-      athletics: [],
+      athletics: [false],
       dexterity: ['', Validators.required],
-      acrobatics: [],
-      sleight: [],
-      stealth: [],
+      acrobatics: [false],
+      sleight: [false],
+      stealth: [false],
       constitution: ['', Validators.required],
       intelligence: ['', Validators.required],
-      arcana: [],
-      history: [],
-      investigation: [],
-      nature: [],
-      religion: [],
+      arcana: [false],
+      history: [false],
+      investigation: [false],
+      nature: [false],
+      religion: [false],
       wisdom: ['', Validators.required],
-      animal: [],
-      insight: [],
-      medicine: [],
-      perception: [],
-      survival: [],
+      animal: [false],
+      insight: [false],
+      medicine: [false],
+      perception: [false],
+      survival: [false],
       charisma: ['', Validators.required],
-      deception: [],
-      intimidation: [],
-      performance: [],
-      persuasion: []
+      deception: [false],
+      intimidation: [false],
+      performance: [false],
+      persuasion: [false]
     });
     this.actionsGroup = this._formBuilder.group({
       actionName: [],
@@ -142,12 +142,6 @@ export class CreateCharacterComponent implements OnInit {
 
     MOCKPLAYERS.push(new Character(this.basicInfo.get('characterName')?.value, this.createVitals(), this.actions, this.features,
       this.createMoney(), this.createAbilities(), this.createSkills(), this.createTraits(), [], [], this.proficiencies, 'Campaign'));
-
-    console.log(this.createVitals());
-    console.log(this.createAbilities());
-    console.log(this.createSkills());
-    console.log(this.actions);
-    console.log(this.createTraits());
   }
 
   createVitals(): Vitals {

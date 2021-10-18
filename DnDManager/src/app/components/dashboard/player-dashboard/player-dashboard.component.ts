@@ -4,6 +4,8 @@ import { Router } from "@angular/router";
 import { MatDialog } from "@angular/material/dialog";
 import { EditCharacterComponent } from "../../character-sheet/edit-character/edit-character.component";
 import { CharacterService } from "../../../services/character.service";
+import { Character } from "../../../models/temp-models/Character";
+import { MOCKPLAYERS } from "../../../models/temp-models/mock-players";
 
 export interface characterByCampaign {
   character:string;
@@ -17,27 +19,35 @@ export interface characterByCampaign {
 })
 export class PlayerDashboardComponent implements OnInit {
 
-  // players:Character[] = []
-  characters:characterByCampaign[] = [];
+  characters:Character[] = []
+  // characters:characterByCampaign[] = [];
   displayedColumns: string[] = ['name', 'campaign'];
   // dataSource = new MatTableDataSource<Character>();
-  dataSource = new MatTableDataSource<characterByCampaign>();
+  dataSource = new MatTableDataSource<Character>();
 
   constructor(private router:Router, public dialog: MatDialog, private characterService:CharacterService) { }
 
   ngOnInit(): void {
-    // this.players = MOCKPLAYERS;
-    // this.dataSource.data = this.players;
-    // this.getCharacters();
-    this.characters = [{character: 'testCharacter', campaign: 'testCampaign'}]
+    this.characters = MOCKPLAYERS;
     this.dataSource.data = this.characters;
+    // this.backendSetup();
+    // this.getCharacters();
+    // console.log(this.characters)
+    // this.characters = [{character: 'testCharacter', campaign: 'testCampaign'}]
+    // this.dataSource.data = this.characters;
   }
 
-  tableClick(name:string) {
-    this.characterService.selectCharacter(name).subscribe();
+  tableClick(character:Character) {
+    // this.characterService.selectCharacter(name).subscribe();
     // this.router.navigate(['character'], {state: {name : name}});
-    this.router.navigate(['character']);
+    this.router.navigate(['character'], {
+    state: {character: character}});
 
+  }
+
+  backendSetup() {
+    this.characterService.login('admin', 'password').subscribe();
+    this.characterService.chooseCampaign('campaign');
   }
 
   createCharacter() {

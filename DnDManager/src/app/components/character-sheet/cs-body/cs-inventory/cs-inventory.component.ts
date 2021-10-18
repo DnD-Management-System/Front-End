@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
 import { Money } from "../../../../models/temp-models/player-subobjects/Money";
 import { MatDialog } from "@angular/material/dialog";
-import { EditMoneyComponent } from "../../edit-character/edit-money/edit-money.component";
 
 @Component({
   selector: 'app-cs-inventory',
@@ -52,20 +51,6 @@ export class CsInventoryComponent implements OnInit {
       }
     }
     this.moneyPouch.push(new Money("Total (gp)", total));
-  }
-
-  openEditDialog() {
-    const dialogRef = this.dialog.open(EditMoneyComponent, {
-      data: {
-        money: this.moneyPouch
-      }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if(result.event == 'update') {
-        this.updatedMoneyEvent.emit(result.data);
-      }
-    });
   }
 
 }

@@ -6,7 +6,7 @@
 
 
   <mat-tab-group mat-align-tabs="center" color="accent">
-    <mat-tab label="Main"><app-cs-body [player]="player"></app-cs-body></mat-tab>
+    <mat-tab label="Main"><app-cs-body [character]="player"></app-cs-body></mat-tab>
     <mat-tab label="Spells"><app-spell-sheet [spells]="player.spells"></app-spell-sheet></mat-tab>
     <mat-tab label="Inventory"><app-inventory [inventory]="player.inventory"></app-inventory></mat-tab>
   </mat-tab-group>
